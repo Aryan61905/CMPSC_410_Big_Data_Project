@@ -1,0 +1,411 @@
+/storage/icds/RISE/sw8/anaconda/anaconda3/lib/python3.9/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.1
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/11/10 19:38:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[Stage 1:>                                                          (0 + 4) / 4][Stage 3:>                                                          (0 + 1) / 1]                                                                                [Stage 4:==============>                                            (1 + 3) / 4]                                                                                23/11/10 19:38:39 WARN DAGScheduler: Broadcasting large task binary with size 20.9 MiB
+[Stage 34:>                                                         (0 + 1) / 1]                                                                                23/11/10 19:38:40 WARN DAGScheduler: Broadcasting large task binary with size 21.0 MiB
+[Stage 35:>                                                         (0 + 1) / 1]                                                                                23/11/10 19:38:43 WARN DAGScheduler: Broadcasting large task binary with size 21.0 MiB
+[Stage 36:>                                                         (0 + 1) / 1]                                                                                23/11/10 19:38:45 WARN DAGScheduler: Broadcasting large task binary with size 21.0 MiB
+[Stage 37:>                                                         (0 + 4) / 4][Stage 37:==============>                                           (1 + 3) / 4]                                                                                23/11/10 19:38:48 WARN DecisionTreeMetadata: DecisionTree reducing maxBins from 400000 to 264686 (= number of training instances)
+23/11/10 19:38:48 WARN DAGScheduler: Broadcasting large task binary with size 21.0 MiB
+[Stage 38:>                                                         (0 + 4) / 4][Stage 38:=============================>                            (2 + 2) / 4][Stage 38:===========================================>              (3 + 1) / 4][Stage 39:===========================================>              (3 + 1) / 4][Stage 39:===========================================>              (3 + 1) / 4][Stage 39:===========================================>              (3 + 1) / 4][Stage 39:===========================================>              (3 + 1) / 4][Stage 39:===========================================>              (3 + 1) / 4]                                                                                23/11/10 19:43:47 WARN DAGScheduler: Broadcasting large task binary with size 22.9 MiB
+[Stage 40:>                                                         (0 + 4) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:=============================>                            (2 + 2) / 4][Stage 41:===========================================>              (3 + 1) / 4]                                                                                23/11/10 19:48:45 WARN DAGScheduler: Broadcasting large task binary with size 24.7 MiB
+[Stage 42:>                                                         (0 + 4) / 4][Stage 42:==============>                                           (1 + 3) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:>                                                         (0 + 4) / 4][Stage 43:==============>                                           (1 + 3) / 4][Stage 43:=============================>                            (2 + 2) / 4][Stage 43:===========================================>              (3 + 1) / 4]                                                                                23/11/10 19:54:21 WARN DAGScheduler: Broadcasting large task binary with size 27.8 MiB
+[Stage 44:>                                                         (0 + 4) / 4][Stage 44:=============================>                            (2 + 2) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:>                                                         (0 + 4) / 4][Stage 45:==============>                                           (1 + 3) / 4][Stage 45:==============>                                           (1 + 3) / 4][Stage 45:==============>                                           (1 + 3) / 4][Stage 45:==============>                                           (1 + 3) / 4][Stage 45:==============>                                           (1 + 3) / 4][Stage 45:=============================>                            (2 + 2) / 4][Stage 45:===========================================>              (3 + 1) / 4]                                                                                23/11/10 20:05:06 WARN DAGScheduler: Broadcasting large task binary with size 29.7 MiB
+[Stage 46:>                                                         (0 + 4) / 4]23/11/10 20:05:10 ERROR Executor: Exception in task 3.0 in stage 46.0 (TID 98)
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+23/11/10 20:05:10 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 3.0 in stage 46.0 (TID 98),5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+23/11/10 20:05:10 WARN TaskSetManager: Lost task 3.0 in stage 46.0 (TID 98) (p-bc-5012.2e.hpc.psu.edu executor driver): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+23/11/10 20:05:10 ERROR TaskSetManager: Task 3 in stage 46.0 failed 1 times; aborting job
+23/11/10 20:05:10 WARN TaskSetManager: Lost task 2.0 in stage 46.0 (TID 97) (p-bc-5012.2e.hpc.psu.edu executor driver): TaskKilled (Stage cancelled)
+23/11/10 20:05:10 ERROR Instrumentation: org.apache.spark.SparkException: Job aborted due to stage failure: Task 3 in stage 46.0 failed 1 times, most recent failure: Lost task 3.0 in stage 46.0 (TID 98) (p-bc-5012.2e.hpc.psu.edu executor driver): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2672)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2608)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2607)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2607)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1182)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2860)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2802)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2791)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2228)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2249)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2268)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2293)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1021)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1020)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$collectAsMap$1(PairRDDFunctions.scala:738)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.PairRDDFunctions.collectAsMap(PairRDDFunctions.scala:737)
+	at org.apache.spark.ml.tree.impl.RandomForest$.findBestSplits(RandomForest.scala:663)
+	at org.apache.spark.ml.tree.impl.RandomForest$.runBagged(RandomForest.scala:208)
+	at org.apache.spark.ml.tree.impl.RandomForest$.run(RandomForest.scala:302)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.$anonfun$train$1(DecisionTreeClassifier.scala:135)
+	at org.apache.spark.ml.util.Instrumentation$.$anonfun$instrumented$1(Instrumentation.scala:191)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:191)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.train(DecisionTreeClassifier.scala:114)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.train(DecisionTreeClassifier.scala:46)
+	at org.apache.spark.ml.Predictor.fit(Predictor.scala:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+
+23/11/10 20:05:10 WARN TaskSetManager: Lost task 1.0 in stage 46.0 (TID 96) (p-bc-5012.2e.hpc.psu.edu executor driver): TaskKilled (Stage cancelled)
+Date
+IUCR
+Primary Type
+Description
+Location Description
+Arrest
+Domestic
+Community Area
+FBI Code
+Latitude
+Longitude
++--------------------+----+------------+--------------------+--------------------+------+--------+--------------+--------+------------+-------------+
+|                Date|IUCR|Primary Type|         Description|Location Description|Arrest|Domestic|Community Area|FBI Code|    Latitude|    Longitude|
++--------------------+----+------------+--------------------+--------------------+------+--------+--------------+--------+------------+-------------+
+|05/07/2020 10:24:...|0820|       THEFT|      $500 AND UNDER|           APARTMENT| False|   False|          35.0|      06|41.830481843|-87.621751752|
+|04/16/2020 05:00:...|0460|     BATTERY|              SIMPLE|           APARTMENT|  True|   False|          60.0|     08B|41.836310224|-87.639624112|
+|07/01/2020 10:16:...|051A|     ASSAULT|AGGRAVATED - HANDGUN|              STREET|  True|   False|          46.0|     04A|41.747609555|-87.549179329|
+|09/27/2020 11:29:...|0460|     BATTERY|              SIMPLE|RESIDENCE - PORCH...| False|   False|          67.0|     08B| 41.77487752|-87.671374872|
+|07/10/2005 03:00:...|0430|     BATTERY|AGGRAVATED: OTHER...|              STREET| False|   False|          68.0|     04B|41.781002663|-87.652107119|
++--------------------+----+------------+--------------------+--------------------+------+--------+--------------+--------+------------+-------------+
+only showing top 5 rows
+
+root
+ |-- Date: string (nullable = true)
+ |-- IUCR: string (nullable = true)
+ |-- Primary Type: string (nullable = true)
+ |-- Description: string (nullable = true)
+ |-- Location Description: string (nullable = true)
+ |-- Arrest: string (nullable = true)
+ |-- Domestic: string (nullable = true)
+ |-- Community Area: string (nullable = true)
+ |-- FBI Code: string (nullable = true)
+ |-- Latitude: string (nullable = true)
+ |-- Longitude: string (nullable = true)
+ |-- indexed_date: double (nullable = false)
+ |-- indexed_primary_type: double (nullable = false)
+ |-- indexed_description: double (nullable = false)
+ |-- indexed_iucr: double (nullable = false)
+ |-- indexed_location_description: double (nullable = false)
+ |-- indexed_arrest: double (nullable = false)
+ |-- indexed_domestic: double (nullable = false)
+ |-- indexed_fbi_code: double (nullable = false)
+ |-- indexed_community_area: double (nullable = false)
+ |-- indexed_latitude: double (nullable = false)
+ |-- indexed_longitude: double (nullable = false)
+
++------------+------------+--------------------+-------------------+----------------------------+--------------+----------------+----------------+----------------------+----------------+-----------------+
+|indexed_date|indexed_iucr|indexed_primary_type|indexed_description|indexed_location_description|indexed_arrest|indexed_domestic|indexed_fbi_code|indexed_community_area|indexed_latitude|indexed_longitude|
++------------+------------+--------------------+-------------------+----------------------------+--------------+----------------+----------------+----------------------+----------------+-----------------+
+|     88984.0|         1.0|                 0.0|                2.0|                         1.0|           0.0|             0.0|             0.0|                  32.0|         23841.0|          20429.0|
+|     31955.0|         2.0|                 1.0|                0.0|                         1.0|           1.0|             0.0|             1.0|                  51.0|         14814.0|          13782.0|
+|    107794.0|        14.0|                 3.0|               11.0|                         0.0|           1.0|             0.0|            12.0|                  21.0|         79789.0|          61872.0|
++------------+------------+--------------------+-------------------+----------------------------+--------------+----------------+----------------+----------------------+----------------+-----------------+
+only showing top 3 rows
+
++--------------------+--------------+
+| features_for_arrest|indexed_arrest|
++--------------------+--------------+
+|[88984.0,1.0,0.0,...|           0.0|
+|[31955.0,2.0,1.0,...|           1.0|
+|[107794.0,14.0,3....|           1.0|
+|[144081.0,2.0,1.0...|           0.0|
+|[21149.0,23.0,1.0...|           0.0|
++--------------------+--------------+
+only showing top 5 rows
+
+Traceback (most recent call last):
+  File "/storage/work/fzr5090/Project/encode_n_DT.py", line 187, in <module>
+    dt_model = dt.fit(trainingData)
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/pyspark/ml/base.py", line 205, in fit
+    return self._fit(dataset)
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/pyspark/ml/wrapper.py", line 379, in _fit
+    java_model = self._fit_java(dataset)
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/pyspark/ml/wrapper.py", line 376, in _fit_java
+    return self._java_obj.fit(dataset._jdf)
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/pyspark/sql/utils.py", line 190, in deco
+    return f(*a, **kw)
+  File "/storage/icds/RISE/sw8/spark-3.3.0-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o526.fit.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 3 in stage 46.0 failed 1 times, most recent failure: Lost task 3.0 in stage 46.0 (TID 98) (p-bc-5012.2e.hpc.psu.edu executor driver): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2672)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2608)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2607)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2607)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1182)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2860)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2802)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2791)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2228)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2249)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2268)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2293)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1021)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1020)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$collectAsMap$1(PairRDDFunctions.scala:738)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.PairRDDFunctions.collectAsMap(PairRDDFunctions.scala:737)
+	at org.apache.spark.ml.tree.impl.RandomForest$.findBestSplits(RandomForest.scala:663)
+	at org.apache.spark.ml.tree.impl.RandomForest$.runBagged(RandomForest.scala:208)
+	at org.apache.spark.ml.tree.impl.RandomForest$.run(RandomForest.scala:302)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.$anonfun$train$1(DecisionTreeClassifier.scala:135)
+	at org.apache.spark.ml.util.Instrumentation$.$anonfun$instrumented$1(Instrumentation.scala:191)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:191)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.train(DecisionTreeClassifier.scala:114)
+	at org.apache.spark.ml.classification.DecisionTreeClassifier.train(DecisionTreeClassifier.scala:46)
+	at org.apache.spark.ml.Predictor.fit(Predictor.scala:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.ml.tree.impl.DTStatsAggregator.<init>(DTStatsAggregator.scala:77)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22(RandomForest.scala:651)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$22$adapted(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3816/0x00000008415f6840.apply(Unknown Source)
+	at scala.Array$.tabulate(Array.scala:418)
+	at org.apache.spark.ml.tree.impl.RandomForest$.$anonfun$findBestSplits$21(RandomForest.scala:647)
+	at org.apache.spark.ml.tree.impl.RandomForest$$$Lambda$3795/0x00000008415e4840.apply(Unknown Source)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:855)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:855)
+	at org.apache.spark.rdd.RDD$$Lambda$3683/0x000000084154dc40.apply(Unknown Source)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:365)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:52)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2452/0x0000000841055040.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+
+23/11/10 20:05:10 ERROR TaskContextImpl: Error in TaskCompletionListener
+org.apache.spark.SparkException: Block broadcast_56 does not exist
+	at org.apache.spark.errors.SparkCoreErrors$.blockDoesNotExistError(SparkCoreErrors.scala:234)
+	at org.apache.spark.storage.BlockInfoManager.blockInfo(BlockInfoManager.scala:237)
+	at org.apache.spark.storage.BlockInfoManager.unlock(BlockInfoManager.scala:358)
+	at org.apache.spark.storage.BlockManager.releaseLock(BlockManager.scala:1281)
+	at org.apache.spark.broadcast.TorrentBroadcast.$anonfun$releaseBlockManagerLock$1(TorrentBroadcast.scala:289)
+	at org.apache.spark.broadcast.TorrentBroadcast.$anonfun$releaseBlockManagerLock$1$adapted(TorrentBroadcast.scala:289)
+	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:131)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeTaskCompletionListeners$1(TaskContextImpl.scala:143)
+	at org.apache.spark.TaskContextImpl.$anonfun$invokeTaskCompletionListeners$1$adapted(TaskContextImpl.scala:143)
+	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:198)
+	at org.apache.spark.TaskContextImpl.invokeTaskCompletionListeners(TaskContextImpl.scala:143)
+	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:136)
+	at org.apache.spark.scheduler.Task.run(Task.scala:146)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+real	26m53.733s
+user	0m1.150s
+sys	0m0.372s
